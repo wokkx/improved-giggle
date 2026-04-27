@@ -1,0 +1,185 @@
+[27Apr2026 22:09:19.444] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forgeserver, --fml.forgeVersion, 47.4.3, --fml.mcVersion, 1.20.1, --fml.forgeGroup, net.minecraftforge, --fml.mcpVersion, 20230612.114412, nogui]
+[27Apr2026 22:09:19.448] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 10.0.9+10.0.9+main.dcd20f30 starting: java version 17.0.18 by Ubuntu; OS Linux arch amd64 version 6.8.0-1044-azure
+[27Apr2026 22:09:20.350] [main/INFO] [net.minecraftforge.fml.loading.ImmediateWindowHandler/]: ImmediateWindowProvider not loading because launch target is forgeserver
+[27Apr2026 22:09:20.367] [main/INFO] [gg.essential.loader.stage1.EssentialLoaderBase/]: Updating Essential Loader (stage2) version 1.6.6 (0e5a0c2dc3815b0a4d4626f551309cf5) from union:/workspaces/improved-giggle/servidor_minecraft/mods/Essential_1-3-10-4_forge_1-19-2.jar%23226!/essential-loader-stage2-modlauncher9-1.6.6.jar
+[27Apr2026 22:09:20.372] [main/FATAL] [cpw.mods.modlauncher.TransformationServicesHandler/MODLAUNCHER]: Encountered serious error loading transformation service, expect problems
+java.util.ServiceConfigurationError: cpw.mods.modlauncher.api.ITransformationService: Provider gg.essential.container.loader.stage0.EssentialTransformationService could not be instantiated
+	at java.util.ServiceLoader.fail(ServiceLoader.java:586) ~[?:?]
+	at java.util.ServiceLoader$ProviderImpl.newInstance(ServiceLoader.java:813) ~[?:?]
+	at java.util.ServiceLoader$ProviderImpl.get(ServiceLoader.java:729) ~[?:?]
+	at cpw.mods.modlauncher.util.ServiceLoaderUtils.lambda$streamWithErrorHandling$0(ServiceLoaderUtils.java:39) ~[modlauncher-10.0.9.jar%2355!/:?]
+	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197) ~[?:?]
+	at java.util.ServiceLoader$ProviderSpliterator.tryAdvance(ServiceLoader.java:1499) ~[?:?]
+	at java.util.Spliterator.forEachRemaining(Spliterator.java:332) ~[?:?]
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509) ~[?:?]
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499) ~[?:?]
+	at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921) ~[?:?]
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234) ~[?:?]
+	at java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:682) ~[?:?]
+	at cpw.mods.modlauncher.TransformationServicesHandler.discoverServices(TransformationServicesHandler.java:133) ~[modlauncher-10.0.9.jar%2355!/:?]
+	at cpw.mods.modlauncher.Launcher.run(Launcher.java:87) ~[modlauncher-10.0.9.jar%2355!/:?]
+	at cpw.mods.modlauncher.Launcher.main(Launcher.java:78) ~[modlauncher-10.0.9.jar%2355!/:?]
+	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:26) ~[modlauncher-10.0.9.jar%2355!/:?]
+	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:23) ~[modlauncher-10.0.9.jar%2355!/:?]
+	at cpw.mods.bootstraplauncher.BootstrapLauncher.main(BootstrapLauncher.java:141) ~[bootstraplauncher-1.1.2.jar:?]
+Caused by: java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
+	at gg.essential.container.loader.stage0.EssentialTransformationServiceBase.loadStage1OrThrow(EssentialTransformationServiceBase.java:27) ~[?:?]
+	at gg.essential.container.loader.stage0.EssentialTransformationServiceBase.lambda$new$0(EssentialTransformationServiceBase.java:20) ~[?:?]
+	at gg.essential.container.loader.stage0.util.DelegatingTransformationServiceBase.<init>(DelegatingTransformationServiceBase.java:13) ~[?:?]
+	at gg.essential.container.loader.stage0.EssentialTransformationServiceBase.<init>(EssentialTransformationServiceBase.java:20) ~[?:?]
+	at gg.essential.container.loader.stage0.EssentialTransformationService.<init>(EssentialTransformationService.java:7) ~[?:?]
+	at jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77) ~[?:?]
+	at jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:?]
+	at java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500) ~[?:?]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:481) ~[?:?]
+	at java.util.ServiceLoader$ProviderImpl.newInstance(ServiceLoader.java:789) ~[?:?]
+	... 16 more
+Caused by: java.lang.reflect.InvocationTargetException
+	at jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77) ~[?:?]
+	at jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:?]
+	at java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500) ~[?:?]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:481) ~[?:?]
+	at gg.essential.container.loader.stage0.EssentialTransformationServiceBase.loadStage1(EssentialTransformationServiceBase.java:47) ~[?:?]
+	at gg.essential.container.loader.stage0.EssentialTransformationServiceBase.loadStage1OrThrow(EssentialTransformationServiceBase.java:25) ~[?:?]
+	at gg.essential.container.loader.stage0.EssentialTransformationServiceBase.lambda$new$0(EssentialTransformationServiceBase.java:20) ~[?:?]
+	at gg.essential.container.loader.stage0.util.DelegatingTransformationServiceBase.<init>(DelegatingTransformationServiceBase.java:13) ~[?:?]
+	at gg.essential.container.loader.stage0.EssentialTransformationServiceBase.<init>(EssentialTransformationServiceBase.java:20) ~[?:?]
+	at gg.essential.container.loader.stage0.EssentialTransformationService.<init>(EssentialTransformationService.java:7) ~[?:?]
+	at jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77) ~[?:?]
+	at jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:?]
+	at java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500) ~[?:?]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:481) ~[?:?]
+	at java.util.ServiceLoader$ProviderImpl.newInstance(ServiceLoader.java:789) ~[?:?]
+	... 16 more
+Caused by: java.lang.NoClassDefFoundError: org/apache/commons/codec/digest/DigestUtils
+	at gg.essential.loader.stage1.EssentialLoaderBase.getChecksum(EssentialLoaderBase.java:356) ~[?:?]
+	at gg.essential.loader.stage1.EssentialLoaderBase.downloadFile(EssentialLoaderBase.java:473) ~[?:?]
+	at gg.essential.loader.stage1.EssentialLoaderBase.doDownload(EssentialLoaderBase.java:326) ~[?:?]
+	at gg.essential.loader.stage1.EssentialLoaderBase.load(EssentialLoaderBase.java:176) ~[?:?]
+	at gg.essential.loader.stage1.EssentialTransformationServiceBase.<init>(EssentialTransformationServiceBase.java:46) ~[?:?]
+	at gg.essential.loader.stage1.EssentialTransformationService.<init>(EssentialTransformationService.java:28) ~[?:?]
+	at jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77) ~[?:?]
+	at jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:?]
+	at java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500) ~[?:?]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:481) ~[?:?]
+	at gg.essential.container.loader.stage0.EssentialTransformationServiceBase.loadStage1(EssentialTransformationServiceBase.java:47) ~[?:?]
+	at gg.essential.container.loader.stage0.EssentialTransformationServiceBase.loadStage1OrThrow(EssentialTransformationServiceBase.java:25) ~[?:?]
+	at gg.essential.container.loader.stage0.EssentialTransformationServiceBase.lambda$new$0(EssentialTransformationServiceBase.java:20) ~[?:?]
+	at gg.essential.container.loader.stage0.util.DelegatingTransformationServiceBase.<init>(DelegatingTransformationServiceBase.java:13) ~[?:?]
+	at gg.essential.container.loader.stage0.EssentialTransformationServiceBase.<init>(EssentialTransformationServiceBase.java:20) ~[?:?]
+	at gg.essential.container.loader.stage0.EssentialTransformationService.<init>(EssentialTransformationService.java:7) ~[?:?]
+	at jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77) ~[?:?]
+	at jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:?]
+	at java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500) ~[?:?]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:481) ~[?:?]
+	at java.util.ServiceLoader$ProviderImpl.newInstance(ServiceLoader.java:789) ~[?:?]
+	... 16 more
+Caused by: java.lang.ClassNotFoundException: org.apache.commons.codec.digest.DigestUtils
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:445) ~[?:?]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:592) ~[?:?]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:525) ~[?:?]
+	at gg.essential.loader.stage1.EssentialLoaderBase.getChecksum(EssentialLoaderBase.java:356) ~[?:?]
+	at gg.essential.loader.stage1.EssentialLoaderBase.downloadFile(EssentialLoaderBase.java:473) ~[?:?]
+	at gg.essential.loader.stage1.EssentialLoaderBase.doDownload(EssentialLoaderBase.java:326) ~[?:?]
+	at gg.essential.loader.stage1.EssentialLoaderBase.load(EssentialLoaderBase.java:176) ~[?:?]
+	at gg.essential.loader.stage1.EssentialTransformationServiceBase.<init>(EssentialTransformationServiceBase.java:46) ~[?:?]
+	at gg.essential.loader.stage1.EssentialTransformationService.<init>(EssentialTransformationService.java:28) ~[?:?]
+	at jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77) ~[?:?]
+	at jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:?]
+	at java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500) ~[?:?]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:481) ~[?:?]
+	at gg.essential.container.loader.stage0.EssentialTransformationServiceBase.loadStage1(EssentialTransformationServiceBase.java:47) ~[?:?]
+	at gg.essential.container.loader.stage0.EssentialTransformationServiceBase.loadStage1OrThrow(EssentialTransformationServiceBase.java:25) ~[?:?]
+	at gg.essential.container.loader.stage0.EssentialTransformationServiceBase.lambda$new$0(EssentialTransformationServiceBase.java:20) ~[?:?]
+	at gg.essential.container.loader.stage0.util.DelegatingTransformationServiceBase.<init>(DelegatingTransformationServiceBase.java:13) ~[?:?]
+	at gg.essential.container.loader.stage0.EssentialTransformationServiceBase.<init>(EssentialTransformationServiceBase.java:20) ~[?:?]
+	at gg.essential.container.loader.stage0.EssentialTransformationService.<init>(EssentialTransformationService.java:7) ~[?:?]
+	at jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77) ~[?:?]
+	at jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:?]
+	at java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500) ~[?:?]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:481) ~[?:?]
+	at java.util.ServiceLoader$ProviderImpl.newInstance(ServiceLoader.java:789) ~[?:?]
+	... 16 more
+[27Apr2026 22:09:20.444] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.5 Source=union:/workspaces/improved-giggle/servidor_minecraft/libraries/org/spongepowered/mixin/0.8.5/mixin-0.8.5.jar%2365!/ Service=ModLauncher Env=SERVER
+[27Apr2026 22:09:20.740] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModDiscoverer/SCAN]: Locator {mods folder locator at /workspaces/improved-giggle/servidor_minecraft/mods} returned 3 files which are client-side-only mods, but we're on a dedicated server. They will be skipped!
+[27Apr2026 22:09:20.841] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file /workspaces/improved-giggle/servidor_minecraft/libraries/net/minecraftforge/fmlcore/1.20.1-47.4.3/fmlcore-1.20.1-47.4.3.jar is missing mods.toml file
+[27Apr2026 22:09:20.843] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file /workspaces/improved-giggle/servidor_minecraft/libraries/net/minecraftforge/javafmllanguage/1.20.1-47.4.3/javafmllanguage-1.20.1-47.4.3.jar is missing mods.toml file
+[27Apr2026 22:09:20.844] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file /workspaces/improved-giggle/servidor_minecraft/libraries/net/minecraftforge/lowcodelanguage/1.20.1-47.4.3/lowcodelanguage-1.20.1-47.4.3.jar is missing mods.toml file
+[27Apr2026 22:09:20.845] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file /workspaces/improved-giggle/servidor_minecraft/libraries/net/minecraftforge/mclanguage/1.20.1-47.4.3/mclanguage-1.20.1-47.4.3.jar is missing mods.toml file
+[27Apr2026 22:09:21.237] [main/WARN] [net.minecraftforge.jarjar.selection.JarSelector/]: Attempted to select two dependency jars from JarJar which have the same identification: Mod File:  and Mod File: . Using Mod File: 
+[27Apr2026 22:09:21.239] [main/INFO] [net.minecraftforge.fml.loading.moddiscovery.JarInJarDependencyLocator/]: Found 13 dependencies adding them to mods collection
+[27Apr2026 22:09:21.352] [main/ERROR] [net.minecraftforge.fml.loading.ModSorter/LOADING]: Missing or unsupported mandatory dependencies:
+	Mod ID: 'minecraft', Requested by: 'itemphysic', Expected range: '[1.19.2,1.19.3)', Actual version: '1.20.1'
+	Mod ID: 'minecraft', Requested by: 'crafttweaker', Expected range: '[1.19,1.20)', Actual version: '1.20.1'
+	Mod ID: 'minecraft', Requested by: 'easysaplings', Expected range: '[1.19.2,1.19.2]', Actual version: '1.20.1'
+	Mod ID: 'minecraft', Requested by: 'rocks', Expected range: '[1.19,1.20)', Actual version: '1.20.1'
+	Mod ID: 'minecraft', Requested by: 'cave_dweller', Expected range: '[1.19.2,1.20)', Actual version: '1.20.1'
+	Mod ID: 'minecraft', Requested by: 'visualworkbench', Expected range: '[1.19.1,1.20)', Actual version: '1.20.1'
+	Mod ID: 'minecraft', Requested by: 'parcool', Expected range: '[1.19.2,1.20)', Actual version: '1.20.1'
+	Mod ID: 'minecraft', Requested by: 'saturn', Expected range: '[1.19.2,1.20)', Actual version: '1.20.1'
+	Mod ID: 'minecraft', Requested by: 'signal_flares', Expected range: '[1.19.2,1.19.2]', Actual version: '1.20.1'
+	Mod ID: 'minecraft', Requested by: 'v_slab_compat', Expected range: '[1.19.2,1.20)', Actual version: '1.20.1'
+	Mod ID: 'minecraft', Requested by: 'arrens_lookout_towers', Expected range: '[1.19.2,1.19.2]', Actual version: '1.20.1'
+	Mod ID: 'minecraft', Requested by: 'auditory', Expected range: '[1.19.2,1.20)', Actual version: '1.20.1'
+	Mod ID: 'minecraft', Requested by: 'whos_there', Expected range: '[1.19.2,1.19.2]', Actual version: '1.20.1'
+	Mod ID: 'minecraft', Requested by: 'smoothboot', Expected range: '[1.19.2,1.20)', Actual version: '1.20.1'
+	Mod ID: 'minecraft', Requested by: 'iceberg', Expected range: '[1.19,1.19.2]', Actual version: '1.20.1'
+	Mod ID: 'minecraft', Requested by: 'the_knocker', Expected range: '[1.19.2,1.19.2]', Actual version: '1.20.1'
+	Mod ID: 'minecraft', Requested by: 'obsidianui', Expected range: '[1.19,1.19.2]', Actual version: '1.20.1'
+	Mod ID: 'minecraft', Requested by: 'puzzleslib', Expected range: '[1.19.2,1.19.2]', Actual version: '1.20.1'
+	Mod ID: 'minecraft', Requested by: 'enhancedvisuals', Expected range: '[1.19.2,1.19.3)', Actual version: '1.20.1'
+	Mod ID: 'minecraft', Requested by: 'starterkit', Expected range: '[1.19.2,1.19.2]', Actual version: '1.20.1'
+	Mod ID: 'minecraft', Requested by: 'bettermineshafts', Expected range: '[1.19.2,1.20)', Actual version: '1.20.1'
+	Mod ID: 'minecraft', Requested by: 'ambientsounds', Expected range: '[1.19.2,1.19.3)', Actual version: '1.20.1'
+	Mod ID: 'minecraft', Requested by: 'you_died', Expected range: '[1.19,1.20)', Actual version: '1.20.1'
+	Mod ID: 'minecraft', Requested by: 'bwrtherain', Expected range: '[1.19.2,1.19.2]', Actual version: '1.20.1'
+	Mod ID: 'minecraft', Requested by: 'collective', Expected range: '[1.19.2,1.19.2]', Actual version: '1.20.1'
+	Mod ID: 'minecraft', Requested by: 'ferritecore', Expected range: '[1.19,1.20)', Actual version: '1.20.1'
+	Mod ID: 'minecraft', Requested by: 'modernfix', Expected range: '[1.19.1,1.19.2]', Actual version: '1.20.1'
+	Mod ID: 'minecraft', Requested by: 'realmrpg_skeletons', Expected range: '[1.19.2,1.19.2]', Actual version: '1.20.1'
+	Mod ID: 'minecraft', Requested by: 'geckolib3', Expected range: '[1.19,1.20)', Actual version: '1.20.1'
+	Mod ID: 'minecraft', Requested by: 'additionalstructures', Expected range: '[1.19,1.20)', Actual version: '1.20.1'
+	Mod ID: 'minecraft', Requested by: 'leatherfromrottenflesh', Expected range: '[1.19.2,1.19.2]', Actual version: '1.20.1'
+	Mod ID: 'minecraft', Requested by: 'carryon', Expected range: '[1.19.2,1.20)', Actual version: '1.20.1'
+	Mod ID: 'minecraft', Requested by: 'defaultoptions', Expected range: '[1.19,1.20)', Actual version: '1.20.1'
+	Mod ID: 'minecraft', Requested by: 'feathertostring', Expected range: '[1.19.2,1.19.2]', Actual version: '1.20.1'
+	Mod ID: 'minecraft', Requested by: 'rmh', Expected range: '[1.19.2,1.20)', Actual version: '1.20.1'
+	Mod ID: 'minecraft', Requested by: 'craftable_slimeball', Expected range: '[1.19.2,1.19.2]', Actual version: '1.20.1'
+	Mod ID: 'minecraft', Requested by: 'culllessleaves', Expected range: '[1.19.2,1.20)', Actual version: '1.20.1'
+	Mod ID: 'minecraft', Requested by: 'bloodbits', Expected range: '[1.19.2,1.19.2]', Actual version: '1.20.1'
+	Mod ID: 'minecraft', Requested by: 'anomaly_rephased', Expected range: '[1.19.2,1.19.2]', Actual version: '1.20.1'
+	Mod ID: 'minecraft', Requested by: 'jei', Expected range: '[1.19,1.19.2]', Actual version: '1.20.1'
+	Mod ID: 'minecraft', Requested by: 'biomemusic', Expected range: '[1.19,1.20)', Actual version: '1.20.1'
+	Mod ID: 'minecraft', Requested by: 'thirst', Expected range: '[1.19.2,1.20)', Actual version: '1.20.1'
+	Mod ID: 'minecraft', Requested by: 'okzoomer', Expected range: '[1.19,1.20)', Actual version: '1.20.1'
+	Mod ID: 'minecraft', Requested by: 'voicechat', Expected range: '[1.19.2,1.19.2]', Actual version: '1.20.1'
+	Mod ID: 'minecraft', Requested by: 'flintfromgravel', Expected range: '[1.19.2,1.19.2]', Actual version: '1.20.1'
+	Mod ID: 'minecraft', Requested by: 'sound_physics_remastered', Expected range: '[1.19.2,1.19.2]', Actual version: '1.20.1'
+	Mod ID: 'minecraft', Requested by: 'betterdungeons', Expected range: '[1.19.2,1.20)', Actual version: '1.20.1'
+	Mod ID: 'minecraft', Requested by: 'corpse', Expected range: '[1.19.2,1.19.2]', Actual version: '1.20.1'
+	Mod ID: 'minecraft', Requested by: 'assimilator', Expected range: '[1.19.2,1.20)', Actual version: '1.20.1'
+	Mod ID: 'minecraft', Requested by: 'smoothswapping', Expected range: '[1.19.2,1.19.2]', Actual version: '1.20.1'
+	Mod ID: 'minecraft', Requested by: 'tacz', Expected range: '[1.19,1.19.3)', Actual version: '1.20.1'
+	Mod ID: 'minecraft', Requested by: 'parcool_compat_addon', Expected range: '[1.19.2,1.20)', Actual version: '1.20.1'
+	Mod ID: 'minecraft', Requested by: 'creativecore', Expected range: '[1.19.2,1.19.3)', Actual version: '1.20.1'
+	Mod ID: 'minecraft', Requested by: 'configured', Expected range: '[1.19.2,1.20)', Actual version: '1.20.1'
+	Mod ID: 'minecraft', Requested by: 'structory', Expected range: '[1.19,1.20)', Actual version: '1.20.1'
+	Mod ID: 'minecraft', Requested by: 'betterfpsdist', Expected range: '[1.19,1.20)', Actual version: '1.20.1'
+	Mod ID: 'minecraft', Requested by: 'the_masked', Expected range: '[1.19.2,1.19.2]', Actual version: '1.20.1'
+	Mod ID: 'minecraft', Requested by: 'rep', Expected range: '[1.19.2,1.20)', Actual version: '1.20.1'
+	Mod ID: 'minecraft', Requested by: 'thestairwell', Expected range: '[1.19.2,1.19.2]', Actual version: '1.20.1'
+	Mod ID: 'minecraft', Requested by: 'farmersdelight', Expected range: '[1.19,1.20)', Actual version: '1.20.1'
+	Mod ID: 'minecraft', Requested by: 'the_one_who_watches', Expected range: '[1.19.2,1.19.2]', Actual version: '1.20.1'
+	Mod ID: 'minecraft', Requested by: 'legendarytooltips', Expected range: '[1.19,1.19.2]', Actual version: '1.20.1'
+	Mod ID: 'minecraft', Requested by: 'increasemobcap', Expected range: '[1.19.2,1.20)', Actual version: '1.20.1'
+	Mod ID: 'minecraft', Requested by: 'balm', Expected range: '[1.19,1.20)', Actual version: '1.20.1'
+	Mod ID: 'minecraft', Requested by: 'spelunkery', Expected range: '[1.19.2,1.20)', Actual version: '1.20.1'
+	Mod ID: 'minecraft', Requested by: 'man', Expected range: '[1.19.2,1.19.2]', Actual version: '1.20.1'
+	Mod ID: 'minecraft', Requested by: 'fallingtree', Expected range: '[1.19.2,1.19.2]', Actual version: '1.20.1'

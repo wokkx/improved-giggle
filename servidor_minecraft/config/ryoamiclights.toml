@@ -1,0 +1,58 @@
+
+[light_sources]
+	entities = true
+	self = true
+	block_entities = true
+	water_sensitive_check = true
+
+	[light_sources.settings]
+
+		[light_sources.settings.entities]
+
+			[light_sources.settings.entities.minecraft]
+				player = true
+				polar_bear = true
+				experience_orb = true
+				squid = true
+				salmon = true
+				rabbit = true
+				item_frame = true
+				item = true
+				chicken = true
+				pig = true
+				horse = true
+				cow = true
+
+			[light_sources.settings.entities.thestairwell]
+				scp_0871 = true
+
+			[light_sources.settings.entities.bwrtherain]
+				spider_skull = true
+				rosemary = true
+				vapor = true
+
+			[light_sources.settings.entities.the_one_who_watches]
+				toww_hanging = true
+				toww_delusion = true
+
+			[light_sources.settings.entities.corpse]
+				corpse = true
+
+			[light_sources.settings.entities.the_masked]
+				footsteps = true
+
+			[light_sources.settings.entities.the_anomaly]
+				anomaly_shadow = true
+
+			[light_sources.settings.entities.starvingskeleton]
+				starving_skeleton = true
+
+			[light_sources.settings.entities.bloodybits]
+				blood_spray = true
+
+			[light_sources.settings.entities.the_knocker]
+				knockerstalklooked = true
+
+			[light_sources.settings.entities.assimilator]
+				assimilator = true
+
